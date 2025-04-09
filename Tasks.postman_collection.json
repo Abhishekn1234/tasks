@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "87445d8a-2767-4d3a-920c-33576d04e2d7",
+		"name": "Tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27038653"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"john@example.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "PROJECT ADD",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Project Name\",\r\n  \"description\": \"This is the project description.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/project/create"
+			},
+			"response": []
+		},
+		{
+			"name": "PROJECT LIST",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/project/list"
+			},
+			"response": []
+		},
+		{
+			"name": "PROJECT UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Projects\",\r\n  \"description\": \"This is the project description.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/project/update/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Tasks ADD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Design Homepage - Updated\",\r\n  \"description\": \"Include banner and nav\",\r\n  \"status\": \"in_progress\",\r\n  \"remarks\": \"Working on responsiveness\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/tasks/create/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Tasks Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Task Title\",\r\n  \"description\": \"Updated task description\",\r\n  \"status\": \"In Progress\",\r\n  \"remarks\": \"This task is being worked on.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/tasks/update/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Status updating tasks",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"Completed\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/tasks/updateStatus/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Tasks report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/tasks/report/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Tasks",
+						"CodeIgniter-3.1.13",
+						"index.php",
+						"tasks",
+						"report",
+						"4"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3NDQyMjY2MDIsImV4cCI6MTc0NDMxMzAwMn0.WNXwQXK73yjfrUrkfPp2ha1yhcrry0AQDvHhqZM6zYk",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost/Tasks/CodeIgniter-3.1.13/index.php/tasks/index/4"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
