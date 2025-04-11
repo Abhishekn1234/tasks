@@ -3,6 +3,7 @@ class Task_model extends CI_Model {
 
     public function getByProject($project_id) {
         return $this->db->get_where('tasks', ['project_id' => $project_id])->result_array();
+    
     }
 
     public function getById($task_id) {

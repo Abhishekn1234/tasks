@@ -20,9 +20,12 @@ class Project_model extends CI_Model {
         return $this->db->update('projects', $data);
     }
 
-    public function delete($project_id, $user_id) {
-        return $this->db->delete('projects', ['id' => $project_id, 'user_id' => $user_id]);
+    public function delete($id, $user_id) {
+        $this->db->where('id', $id);
+        $this->db->where('user_id', $user_id);
+        return $this->db->delete('projects');
     }
+    
 
  
 public function getById($project_id)

@@ -86,8 +86,26 @@ class Project extends CI_Controller {
     }
 
     public function delete($id) {
+        header('Content-Type: application/json');
+        
         $user_id = $this->verifyToken();
-        $this->Project_model->delete($id, $user_id);
-        echo json_encode(['message' => 'Project deleted']);
+    
+        if (!$id || !is_numeric($id)) {
+            http_response_code(400);
+            echo json_encode(['message' => 'Invalid project ID']);
+            return;
+        }
+    
+        $this->load->model('Project_model');
+    
+        $deleted = $this->Project_model->delete($id, $user_id);
+    
+        if ($deleted) {
+            echo json_encode(['message' => 'Project deleted']);
+        } else {
+            http_response_code(500);
+            echo json_encode(['message' => 'Failed to delete project. It may not exist or you may not have permission.']);
+        }
     }
+    
 }
